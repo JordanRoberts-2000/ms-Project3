@@ -74,7 +74,8 @@ if ('scrollRestoration' in history) {
   });
   // new and improved/fixed loading
   $(window).on("load",function(){
-    $("#videoBackground").html('<source src="../navvid.mp4" type="video/mp4">')
+    console.log("here");
+    $("#videoBackground").html('<source src="{{url_for("navvid", filename="navvid.mp4")}}" type="video/mp4">')
     document.getElementById("videoBackground").addEventListener('loadeddata', (e) => {
       gridDisplay();
     });
