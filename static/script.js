@@ -9,17 +9,17 @@ if ('scrollRestoration' in history) {
   };
   //display main grid
   var mainGridArray = [
-    {"background":"url(shoes/sneaker_8.jpg)","tag1":"blue"},
-    {"background":"url(shoes/sneaker_9.jpg)","tag1":"red"},
-    {"background":"url(shoes/sneaker_10.jpg)","tag1":"red"},
-    {"background":"url(shoes/sneaker_11.jpg)","tag1":"red"},
-    {"background":"url(shoes/sneaker_12.jpg)","tag1":"red"},
-    {"background":"url(shoes/sneaker_16.jpg)","tag1":"red"},
-    {"background":"url(shoes/sneaker_8.jpg)","tag1":"blue"},
-    {"background":"url(shoes/sneaker_9.jpg)","tag1":"red"},
-    {"background":"url(shoes/sneaker_10.jpg)","tag1":"red"},
-    {"background":"url(shoes/sneaker_11.jpg)","tag1":"red"},
-    {"background":"url(shoes/sneaker_12.jpg)","tag1":"red"},
+    {"background":"url(../shoes/sneaker_8.jpg)","tag1":"blue"},
+    {"background":"url(../shoes/sneaker_9.jpg)","tag1":"red"},
+    {"background":"url(../shoes/sneaker_10.jpg)","tag1":"red"},
+    {"background":"url(../shoes/sneaker_11.jpg)","tag1":"red"},
+    {"background":"url(../shoes/sneaker_12.jpg)","tag1":"red"},
+    {"background":"url(../shoes/sneaker_16.jpg)","tag1":"red"},
+    {"background":"url(../shoes/sneaker_8.jpg)","tag1":"blue"},
+    {"background":"url(../shoes/sneaker_9.jpg)","tag1":"red"},
+    {"background":"url(../shoes/sneaker_10.jpg)","tag1":"red"},
+    {"background":"url(../shoes/sneaker_11.jpg)","tag1":"red"},
+    {"background":"url(../shoes/sneaker_12.jpg)","tag1":"red"},
     {"background":"url(shoes/sneaker_16.jpg)","tag1":"red"},
     {"background":"url(shoes/sneaker_8.jpg)","tag1":"blue"},
     {"background":"url(shoes/sneaker_9.jpg)","tag1":"red"},
@@ -73,7 +73,7 @@ if ('scrollRestoration' in history) {
   });
   // new and improved/fixed loading
   $(window).on("load",function(){
-    $("#videoBackground").html('<source src="navvid.mp4" type="video/mp4">')
+    $("#videoBackground").html('<source src="../navvid.mp4" type="video/mp4">')
     document.getElementById("videoBackground").addEventListener('loadeddata', (e) => {
       gridDisplay();
     });
