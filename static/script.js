@@ -1,3 +1,4 @@
+console.log("loaded js");
 //auto scroll down on refresh fix
 if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
