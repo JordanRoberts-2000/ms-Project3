@@ -11,7 +11,7 @@ if ('scrollRestoration' in history) {
   //display main grid
   var mainGridArray = [
     {"background":"url({{url_for('shoes', filename='sneaker_8.jpg')}})","tag1":"blue"},
-    {"background":"url(../shoes/sneaker_9.jpg)","tag1":"red"},
+    {"background":"url({{url_for('shoes', filename='sneaker_9.jpg')}})","tag1":"red"},
     /*{"background":"url(../shoes/sneaker_10.jpg)","tag1":"red"},
     {"background":"url(../shoes/sneaker_11.jpg)","tag1":"red"},
     {"background":"url(../shoes/sneaker_12.jpg)","tag1":"red"},
