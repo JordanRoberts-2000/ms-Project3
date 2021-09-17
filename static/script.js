@@ -59,6 +59,7 @@ if ('scrollRestoration' in history) {
     for (var i = 0; i < info.length; i++){
       console.log("kk");
       var item = '<div style="background-image:'+info[i].background+'" class="item"><i class="far fa-comments"></i></div>'
+      console.log(item);
       $(".main-grid").append(item);
       $(".item:nth-child(19n-15)").addClass("item-big");
       $(".item:nth-child(19n-11)").addClass("item-big");
