@@ -74,8 +74,9 @@ if ('scrollRestoration' in history) {
   });
   // new and improved/fixed loading
   $(window).on("load",function(){
-    
+      console.log("ho")
       gridDisplay();
+      console.log("me")
     
   });
   function gridHoverOn(a){
