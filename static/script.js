@@ -55,7 +55,9 @@ if ('scrollRestoration' in history) {
   };
   function buildGrid(info){
     $(".main-grid").html("");
+    console.log("gg");
     for (var i = 0; i < info.length; i++){
+      console.log("kk");
       var item = '<div style="background-image:'+info[i].background+'" class="item"><i class="far fa-comments"></i></div>'
       $(".main-grid").append(item);
       $(".item:nth-child(19n-15)").addClass("item-big");
@@ -74,9 +76,9 @@ if ('scrollRestoration' in history) {
   });
   // new and improved/fixed loading
   $(window).on("load",function(){
-      console.log("ho")
+      console.log("ho");
       gridDisplay();
-      console.log("me")
+      console.log("me");
     
   });
   function gridHoverOn(a){
