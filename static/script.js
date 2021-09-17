@@ -10,10 +10,10 @@ if ('scrollRestoration' in history) {
   };
   //display main grid
   var mainGridArray = [
-    {"background":"url({{url_for('static', filename='shoes/sneaker_8.jpg')}})","tag1":"blue"},
-    {"background":"url({{url_for('static', filename='shoes/sneaker_9.jpg')}})","tag1":"red"},
+    {"background":"url(static/shoes/sneaker_8.jpg)","tag1":"blue"},
+    {"background":"url(static/shoes/sneaker_9.jpg)","tag1":"red"},
     {"background":"url(static/shoes/sneaker_10.jpg)","tag1":"red"},
-    {"background":"url(../static/shoes/sneaker_11.jpg)","tag1":"red"}
+    {"background":"url(static/shoes/sneaker_11.jpg)","tag1":"red"},
     /*{"background":"url(../shoes/sneaker_12.jpg)","tag1":"red"},
     {"background":"url(../shoes/sneaker_16.jpg)","tag1":"red"},
     {"background":"url(../shoes/sneaker_8.jpg)","tag1":"blue"},
