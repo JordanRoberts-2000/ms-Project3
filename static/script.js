@@ -96,10 +96,10 @@ if ('scrollRestoration' in history) {
   });
   // new and improved/fixed loading
   $(window).on("load",function(){
-      console.log("ho");
+    $("#videoBackground").html('<source src="static/navvid.mp4" type="video/mp4">')
+    document.getElementById("videoBackground").addEventListener('loadeddata', (e) => {
       gridDisplay();
-      console.log("me");
-    
+    });
   });
   function gridHoverOn(a){
     $(".item:nth-child("+a+")").on("mouseover",function(){
