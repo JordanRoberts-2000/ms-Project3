@@ -28,7 +28,9 @@
         <div id="intro">
           <h2>Welcome</h2>
           <br>
-          
+          {% for task in tasks%}
+            {{task.task_name}}
+          {% endfor %}
           <br>
         </div>
       </div>
