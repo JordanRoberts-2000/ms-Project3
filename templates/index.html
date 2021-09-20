@@ -75,12 +75,14 @@
     <div class="sign-up-container">
       <div class = "sign-up">
         <i class="fas fa-times"></i>
-        <label>username</label>
-          <input>
-          <label>email</label>
-          <input>
+        <form method="POST" action="{{ url_for('index') }}">
+          <label>username</label>
+          <input name="username" type="text" minlength="5"
+          maxlength="10" pattern="^[a-zA-Z0-9]{5,10}$" required>
           <label>password</label>
-          <input>
+          <input name="password" type="text" minlength="5"
+          maxlength="10" pattern="^[a-zA-Z0-9]{5,10}$" required>
+        </form>
       </div>
     </div>
     <div class="mobile-icons">
