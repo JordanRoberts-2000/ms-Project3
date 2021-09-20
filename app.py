@@ -18,9 +18,15 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-@app.route("/", methods=["GET", "POST"])
+@app.route("/")
+@app.route("/get_tasks")
 def get_tasks():
     tasks = mongo.db.tasks.find()
+    return render_template("tasks.html", tasks=tasks)
+
+
+@app.route("/register", methods=["GET", "POST"])
+def register():
     if request.method == "POST":
         # check if username already exists in db
         existing_user = mongo.db.users.find_one(
@@ -28,7 +34,7 @@ def get_tasks():
 
         if existing_user:
             flash("Username already exists")
-            return redirect(url_for("index"))
+            return redirect(url_for("register"))
 
         register = {
             "username": request.form.get("username").lower(),
@@ -39,10 +45,4 @@ def get_tasks():
         # put the new user into 'session' cookie
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
-    return render_template("index.html", tasks=tasks)
-
-
-if __name__ == "__main__":
-    app.run(host=os.environ.get("IP"),
-            port=int(os.environ.get("PORT")),
-            debug=True)
+    return render_template("register.html")
