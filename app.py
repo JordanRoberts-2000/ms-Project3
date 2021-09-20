@@ -1,4 +1,3 @@
-##############################################
 import os
 from flask import (
     Flask, flash, render_template,
@@ -47,7 +46,6 @@ def register():
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
         return redirect(url_for("profile", username=session["user"]))
-
     return render_template("index.html")
 
 
@@ -66,7 +64,7 @@ def login():
                         flash("Welcome, {}".format(
                             request.form.get("username")))
                         return redirect(url_for(
-                            "profile", username=session["user"]))
+                            "profile", username=session["user"])
             else:
                 # invalid password match
                 flash("Incorrect Username and/or Password")
