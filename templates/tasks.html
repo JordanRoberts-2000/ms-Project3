@@ -76,7 +76,7 @@
     <div class="sign-up-container">
       <div class = "sign-up">
         <i class="fas fa-times"></i>
-        <form method="POST" action="{{ url_for('index') }}">
+        <form method="POST" action="{{ url_for('get_tasks') }}">
           <label>username</label>
           <input name="username" type="text" minlength="5"
           maxlength="10" pattern="^[a-zA-Z0-9]{5,10}$" required>
