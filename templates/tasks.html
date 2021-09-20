@@ -1,12 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    tragic
-</body>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>repl.it</title>
+    <link href="{{url_for('static', filename='style.css')}}" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/4f63df4965.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="mobileNav"></div>
+    <nav>
+      <video id="videoBackground" onload="removeLoading" autoplay muted>
+        
+      </video>
+      <div id="top">
+        <div id="search">
+          <i class="fas fa-search"></i>
+        </div>
+        <input type="text" placeholder="   Colour, Artist, Description">
+      </div>
+      <div id="header">
+        <h1>Avious Artwork</h1>
+      </div>
+      <div id="middle">
+        <div id="intro">
+          <h2>Welcome</h2>
+          <br>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        </div>
+      </div>
+      <div id="icons">
+        <ul>
+          <li>
+            <i class="fas fa-users"></i>
+          </li>
+          <li>
+            <i class="fas fa-palette"></i>
+          </li>
+          <li>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+          </li>
+          <li>
+            <i class="far fa-eye"></i>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <div class="artist-grid">
+        <div style="background-image: url(static/shoes/sneaker_1.jpg)" class="a-item"></div>
+        <div style="background-image: url(static/shoes/sneaker_10.jpg)" class="a-item"></div>
+        <div style="background-image: url(static/shoes/sneaker_11.jpg)" class="a-item"></div>
+        <div style="background-image: url(static/shoes/sneaker_12.jpg)" class="a-item"></div>
+        <div style="background-image: url(static/shoes/sneaker_13.jpg)" class="a-item"></div>
+        <div style="background-image: url(static/shoes/sneaker_14.jpg)" class="a-item"></div>
+      </div>
+      <div class="main-grid">
+      </div>
+    </main>
+    <div class="load">
+      <h1 class="load-text">LOADING...<h1>
+    </div>
+    <div class="popup-container">
+      <div class = "popup">
+        <i class="fas fa-times"></i>
+        <div class = "popup-side1"></div>
+        <div class = "popup-side2">heyho</div>
+      </div>
+    </div>
+    <div class="sign-up-container">
+      <div class = "sign-up">
+        <i class="fas fa-times"></i>
+        <form method="POST" action="{{ url_for('index') }}">
+          <label>username</label>
+          <input name="username" type="text" minlength="5"
+          maxlength="10" pattern="^[a-zA-Z0-9]{5,10}$" required>
+          <label>password</label>
+          <input name="password" type="text" minlength="5"
+          maxlength="10" pattern="^[a-zA-Z0-9]{5,10}$" required>
+        </form>
+      </div>
+    </div>
+    <div class="mobile-icons">
+      <ul>
+        <li>
+          <i class="fas fa-users"></i>
+        </li>
+        <li>
+          <i class="fas fa-palette"></i>
+        </li>
+        <li>
+          <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        </li>
+        <li>
+          <i class="far fa-eye"></i>
+        </li>
+      </ul>
+    </div>
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+  </body>
 </html>
