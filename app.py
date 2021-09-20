@@ -84,7 +84,7 @@ def profile(username):
     # grab the session user's username from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-    return render_template("tasks.html", username=username)
+    return render_template("register.html", username=username)
 
 
 if __name__ == "__main__":
