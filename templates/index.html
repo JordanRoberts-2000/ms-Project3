@@ -86,6 +86,17 @@
             Register
         </button>
         </form>
+        <form method="POST" action="{{ url_for('login') }}">
+          <label>username</label>
+          <input name="username" type="text" minlength="5"
+          maxlength="10" pattern="^[a-zA-Z0-9]{5,10}$" required>
+          <label>password</label>
+          <input name="password" type="text" minlength="5"
+          maxlength="10" pattern="^[a-zA-Z0-9]{5,10}$" required>
+          <button type="submit">
+            Log In
+        </button>
+        </form>
         <section>
           {% with messages = get_flashed_messages() %}
             {% if messages %}
