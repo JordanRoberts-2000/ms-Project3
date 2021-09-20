@@ -76,7 +76,7 @@ def login():
             flash("Incorrect Username and/or Password")
             return redirect(url_for("login"))
 
-    return
+    return render_template("index.html")
 
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
@@ -84,7 +84,7 @@ def profile(username):
     # grab the session user's username from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-    return render_template("index.html", username=username)
+    return render_template("tasks.html", username=username)
 
 
 if __name__ == "__main__":
