@@ -81,7 +81,7 @@ def login():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
-    return render_template("index.html")
+    return "hi"
 
 
 if __name__ == "__main__":
