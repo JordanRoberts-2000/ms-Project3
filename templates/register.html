@@ -7,7 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    ooof
-    <h3>{{ username }}'s Profile</h3>
+    <form method="POST" action="">
+        <input name="task_name" minlength="5" maxlength="50" type="text" class="validate" required>
+        <label for="task_name">Task Name</label>
+        <textarea name="task_description" minlength="5" maxlength="200" class="materialize-textarea validate" required></textarea>
+        <label for="task_description">Task Description</label>
+    </form>
 </body>
 </html>
