@@ -1,3 +1,8 @@
+'''#Mostly CodeInstitutes code;
+#Mainly me trying to learn why everything does what it does
+#couldnt figure out how to get the login data to display without going to seperate page.
+#return render_template("index.html")-> i think if this is called twice it causes the error idk
+#even commenting with # causes problems'''
 import os
 from flask import (
     Flask, flash, render_template,
